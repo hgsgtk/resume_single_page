@@ -1,7 +1,10 @@
 import React from 'react';
 import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+
 import icon_image from '../images/github-logo.jpg';
 import profile_image from '../images/profile_image.jpg';
+
+import IconButton from 'material-ui/IconButton';
 
 const ProfileCard = ()=>(
   <Card>
@@ -17,7 +20,9 @@ const ProfileCard = ()=>(
     </CardMedia>
     <CardTitle title="Kazuki Higashiguchi" subtitle="東口和暉" />
     <CardText>
-      0123456789
+      <div>
+        <IconButton iconClassName="muidocs-icon-custom-github" />
+      </div>
     </CardText>
   </Card>
 );
