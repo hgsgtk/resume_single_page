@@ -5,6 +5,8 @@ import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import MyAwesomeReactComponent from './components/MyAwesomeReactComponent';
 import Header from './components/Header';
+import ProfileCard from './components/ProfileCard';
+import HistoryCard from './components/HistoryCard';
 
 class App extends Component {
   render() {
@@ -13,6 +15,16 @@ class App extends Component {
         <MuiThemeProvider>
           <Header />
         </MuiThemeProvider>
+
+        <div>
+          <MuiThemeProvider>
+            <ProfileCard />
+          </MuiThemeProvider>
+
+          <MuiThemeProvider>
+            <HistoryCard />
+          </MuiThemeProvider>
+        </div>
 
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.

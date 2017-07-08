@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 
 const AppBarIcon = ()=>(
   <AppBar
-    title="khigashi Resume"
+    title="Profile Sheet"
     iconClassNameRight="muidocs-icon-navigation-expand-more"
   />
 );
