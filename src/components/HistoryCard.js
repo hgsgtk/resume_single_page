@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn,} from 'material-ui/Table';
 
+
 const tableData = [
   {
     term: '2016/4/1〜',
@@ -21,6 +22,12 @@ const tableData = [
   },
 ];
 
+const styles = {
+  card: {
+    margin: '10px',
+  }
+}
+
 export default class HistoryCard extends Component{
   state = {
     showCheckboxes: false,
@@ -28,14 +35,19 @@ export default class HistoryCard extends Component{
 
   render(){
     return(
-      <Card>
+      <Card
+        initiallyExpanded={true}
+        style={styles.card}
+      >
         <CardHeader
           title="History"
           subtitle="経歴"
           actAsExpander={true}
           showExpandableButton={true}
         />
-        <CardText expandable={true}>
+        <CardText
+          expandable={true}
+        >
           <Table>
             <TableHeader
               displaySelectAll={this.state.showCheckboxes}

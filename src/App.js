@@ -10,6 +10,12 @@ import ProfileCard from './components/ProfileCard';
 import HistoryCard from './components/HistoryCard';
 import Footer from './components/Footer';
 
+const styles = {
+  container: {
+    padding: '10px',
+  },
+};
+
 class App extends Component {
 
   render() {
@@ -17,10 +23,13 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div className="App">
           <Header />
-          <ProfileCard />
-          <HistoryCard />
+          <div style={styles.container}>
+            <ProfileCard
+              style={styles.leftcard}/>
+            <HistoryCard />
+          </div>
           <Footer />
-        </div> 
+        </div>
       </MuiThemeProvider>
     );
   }
